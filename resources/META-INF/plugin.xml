@@ -1,0 +1,55 @@
+<idea-plugin>
+    <id>com.xc.plugin.intellij.ut</id>
+    <name>UT Plugin</name>
+    <version>2.1.2</version>
+    <vendor email="939413930@qq.com" url="http://www.github.com">xianggecumt</vendor>
+
+    <description><![CDATA[
+      <p>
+        UT plugin for IntelliJ IDEA, which is used to automatically generate JUnit tests.
+      </p>
+
+       Main features:
+        <ul>
+          <li>Generation of JUnit 4 tests for the selected classes</li>
+          <li>Generation of dependency mock code for the selected classes</li>
+        </ul>
+
+    ]]></description>
+
+    <change-notes><![CDATA[
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="141"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <application-components>
+        <!-- Add your application components here -->
+    </application-components>
+
+    <project-components>
+        <!-- Add your project components here -->
+        <component>
+            <implementation-class>com.github.xg.utgen.ProjectRegistration</implementation-class>
+        </component>
+    </project-components>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="GenerateUT" class="com.github.xg.utgen.StartAction" text="Generate UT">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="WeighingNewGroup"/>
+        </action>
+    </actions>
+
+</idea-plugin>

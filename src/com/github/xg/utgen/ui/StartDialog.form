@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.github.xg.utgen.ui.StartDialog">
+  <grid id="27dc6" binding="configPanel" layout-manager="GridLayoutManager" row-count="5" column-count="11" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="10" left="10" bottom="10" right="10"/>
+    <constraints>
+      <xy x="20" y="20" width="448" height="234"/>
+    </constraints>
+    <properties>
+      <maximumSize width="-1" height="-1"/>
+      <minimumSize width="-1" height="-1"/>
+    </properties>
+    <border type="bevel-lowered" title=" UT Plugin Options">
+      <font size="17"/>
+    </border>
+    <children>
+      <component id="ea036" class="javax.swing.JTextField" binding="outputPathField">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="10" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="true"/>
+          <toolTipText value="可选，默认为项目的src\test\java"/>
+        </properties>
+      </component>
+      <component id="5e390" class="javax.swing.JCheckBox" binding="closeFailCheckBox">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="不生成默认fail"/>
+        </properties>
+      </component>
+      <component id="c72db" class="javax.swing.JButton" binding="okButton">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="2" indent="0" use-parent-layout="false">
+            <minimum-size width="75" height="27"/>
+            <preferred-size width="75" height="27"/>
+            <maximum-size width="75" height="27"/>
+          </grid>
+        </constraints>
+        <properties>
+          <horizontalAlignment value="0"/>
+          <text value="OK"/>
+        </properties>
+      </component>
+      <component id="67944" class="javax.swing.JButton" binding="cancelButton">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false">
+            <minimum-size width="75" height="27"/>
+            <preferred-size width="75" height="27"/>
+            <maximum-size width="75" height="27"/>
+          </grid>
+        </constraints>
+        <properties>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <text value="Cancel"/>
+        </properties>
+      </component>
+      <component id="24751" class="javax.swing.JCheckBox" binding="closeMockCheckBox">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <selected value="false"/>
+          <text value="不生成Mock代码"/>
+        </properties>
+      </component>
+      <component id="6fda5" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <labelFor value="ea036"/>
+          <text value="文件输出路径:"/>
+          <toolTipText value=""/>
+        </properties>
+      </component>
+      <component id="6dd61" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <labelFor value="6c99"/>
+          <text value="本地Maven仓库:"/>
+          <toolTipText value=""/>
+        </properties>
+      </component>
+      <component id="6c99" class="javax.swing.JTextField" binding="mavenRepoField">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="10" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="true"/>
+          <toolTipText value="可选，默认为mvn help:effective-settings命令获取的仓库地址"/>
+        </properties>
+      </component>
+      <component id="1c757" class="javax.swing.JCheckBox" binding="mockDialogCheckBox">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="交互式Mock"/>
+        </properties>
+      </component>
+      <component id="80c25" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="文件后缀:"/>
+        </properties>
+      </component>
+      <component id="3dec7" class="javax.swing.JTextField" binding="fileSuffixField">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <toolTipText value="生成的文件名中类名与Test或Mock的间隔,，默认为Auto，填blank代表间隔为空"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
